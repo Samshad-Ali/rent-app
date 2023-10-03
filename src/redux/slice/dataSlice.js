@@ -1,26 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { data,data2 } from "../../assets/data.js";
+import { data } from "../../assets/data.js";
 const rentDataSlice = createSlice({
     name:"dataSlice",
     initialState:{
-        datas1:[],
-        datas2:[],
-        newData:[]
+        data:[],
+        filteredData:[]
     },
     reducers:{
         getData:(state,action)=>{
-            state.datas1 = data;
-            state.datas2=data2
+            state.data=data;
         },
         filteredData:(state,action)=>{
             let btn = action.payload.toLowerCase();
-            console.log(btn)
-            state.newData=[...state?.datas1,...state?.datas2]
             if(!btn){
-                return state.newData
+                return state.data;
+            }else{
+             state.filteredData = state.data.filter((item)=>item.country===btn)
             }
-            console.log(state.newData)
-            state.newData = state.newData.filter((item)=>item.country===btn)
         }
     }
 })

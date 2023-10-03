@@ -85,51 +85,52 @@ export const data = [
         isPopular:false,
         country:"mumbai"
     },
+    {
+        id: nanoid(),
+        img:'https://assets.architecturaldigest.in/photos/600822e456e01e341bc35486/master/w_1600%2Cc_limit/Home-swimming-pool-Vastu-tips-5.jpg',
+        location:"3890 Poplar St.",
+        title:"Regal North Hills - 4150 Main at North Hills St, Releigh",
+        noOfRoom:"3 Room",
+        noOfBed:"4 Bed",
+        noOfBath:"1 Bath",
+        areaOfPlot:"732 sft",
+        price:"$ 5,256",
+        isPopular:true,
+        sale:"For Rent",
+        country:"london"
+    },
+    {
+        id: nanoid(),
+        img:"https://media-cdn.tripadvisor.com/media/vr-splice-j/0b/fb/f3/d3.jpg",
+        location:"8558 Pecan St.",
+        title:"RC E Theaters - 907 S Beckford Dr, Henderson, NC 275336",
+        noOfRoom:"3 Room",
+        noOfBed:"4 Bed",
+        noOfBath:"1 Bath",
+        areaOfPlot:"732",
+        price:"$ 7,255",
+        isPopular:false,
+        sale:"For Rent",
+        country:"new york"
+    },
+    {
+        id: nanoid(),
+        img:"https://assets-news.housing.com/news/wp-content/uploads/2013/10/16184111/Tallest-buildings-in-Mumbai-Top-10-Mumbai%E2%80%99s-tallest-buildings-FB-1200x700-compressed.jpg",
+        location:"8558 Parker Road",
+        title:"Costco Wholesale - 1021 Oak Forest Ln, Myrtie Beach, Sc",
+        noOfRoom:"3 Room",
+        noOfBed:"4 Bed",
+        noOfBath:"1 Bath",
+        areaOfPlot:"732",
+        price:" $ 7,255",
+        isPopular:false,
+        sale:"For Sale",
+        country:"mumbai"
+    }, 
 
 ]
 
 export const data2 = [
     
-        {
-            id: nanoid(),
-            img:'https://assets.architecturaldigest.in/photos/600822e456e01e341bc35486/master/w_1600%2Cc_limit/Home-swimming-pool-Vastu-tips-5.jpg',
-            location:"3890 Poplar St.",
-            title:"Regal North Hills - 4150 Main at North Hills St, Releigh",
-            noOfRoom:"3 Room",
-            noOfBed:"4 Bed",
-            noOfBath:"1 Bath",
-            areaOfPlot:"732 sft",
-            price:"$ 5,256",
-            isPopular:true,
-            sale:"For Rent",
-            country:"london"
-        },
-        {
-            id: nanoid(),
-            img:"https://media-cdn.tripadvisor.com/media/vr-splice-j/0b/fb/f3/d3.jpg",
-            location:"8558 Pecan St.",
-            title:"RC E Theaters - 907 S Beckford Dr, Henderson, NC 275336",
-            noOfRoom:"3 Room",
-            noOfBed:"4 Bed",
-            noOfBath:"1 Bath",
-            areaOfPlot:"732",
-            price:"$ 7,255",
-            isPopular:false,
-            sale:"For Rent",
-            country:"new york"
-        },
-        {
-            id: nanoid(),
-            img:"https://assets-news.housing.com/news/wp-content/uploads/2013/10/16184111/Tallest-buildings-in-Mumbai-Top-10-Mumbai%E2%80%99s-tallest-buildings-FB-1200x700-compressed.jpg",
-            location:"8558 Parker Road",
-            title:"Costco Wholesale - 1021 Oak Forest Ln, Myrtie Beach, Sc",
-            noOfRoom:"3 Room",
-            noOfBed:"4 Bed",
-            noOfBath:"1 Bath",
-            areaOfPlot:"732",
-            price:" $ 7,255",
-            isPopular:false,
-            sale:"For Sale",
-            country:"mumbai"
-        }, 
+    
 ]

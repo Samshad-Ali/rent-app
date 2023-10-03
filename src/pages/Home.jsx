@@ -6,16 +6,14 @@ import { filteredData, getData } from '../redux/slice/dataSlice';
 import { useDispatch, useSelector } from 'react-redux';
 const Home = () => {
     const [isMore,setIsMore]=useState(false);
-    const [isbtn,setBtn] = useState(false)
+    const [isBtn,setBtn] = useState(false)
     const dispatch = useDispatch();
-    let data = useSelector(state=>state?.dataReducer.datas1);
-    const data2 = useSelector(state=>state?.dataReducer.datas2)
-    let newData = useSelector(state=>state?.dataReducer.newData)
+    let data = useSelector(state=>state?.dataReducer.data);
+    let newData = useSelector(state=>state?.dataReducer.filteredData);
     const btns = ["New York","Mumbai","Paris","London"];
     const handleBtn=(currBtn)=>{
-        dispatch(filteredData(currBtn))
-        setBtn(true)
-        
+        dispatch(filteredData(currBtn));
+        setBtn(true)      
     }
     const handleShowMoreBtn=()=>{
         setIsMore(!isMore)
@@ -52,24 +50,30 @@ const Home = () => {
     </div>
     <div className='w-full flex flex-wrap gap-8 mt-4 justify-center items-center'>
       {
-        isbtn? 
-        newData?.map((data)=>{
+        isBtn?
+        newData?.map((data,i)=>{
             return <Card key={data.id} data = {data} />
-          }) :
-          data?.map((data)=>{
-              return <Card key={data.id} data = {data} />
-            })
+          }) 
+        :
+        data?.map((data,i)=>{
+          if(i<=5)
+            return <Card key={data.id} data = {data} />
+          }) 
         }
         </div>
         <button onClick={handleShowMoreBtn} className=' my-2 flex gap-1 items-center bg-blue-700 text-white rounded-3xl px-4 p-2  w-fit self-center font-semibold'> <span>
             <TbLoaderQuarter/>
             </span> Show More</button>
         <div>
-        <div className='w-full flex flex-wrap gap-8 mt-4 justify-between items-center'>
+        <div className='w-full flex flex-wrap gap-8 mt-4 justify-center items-center'>
 
 
-{
-    isMore? data2?.map((item)=>{
+{   
+    isBtn ? isMore?newData?.map((data,i)=>{
+      return <Card key={data.id} data = {data} />
+    }): "" :
+    isMore? data?.map((item,i)=>{
+      if(i>5)
         return <Card key={item.id} data = {item} />
       }) : ""
 
